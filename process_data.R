@@ -1,8 +1,10 @@
+### Filter microbiome data, merge microbiome and metabolome data
 data_dna <- data$otu[,,1]
 data_dna_filtered <- data_dna[rownames(data_dna) %in% filter_file$bacteria[filter_file$filter.D==TRUE],]
 data_dna_filtered_t <- t(data_dna_filtered)
 data_metabolome_filtered <- data_metabolome[data_metabolome$ID %in% data_out$ID,]
-#use microb_t3_b as the binary ECC trait
+
+# Separate datasets by ECC disease group. Use microb_t3_b as the binary ECC trait.
 temp1 <- data_out[,c("ID","micro_t3_b")]
 temp2 <- merge(temp1,data_metabolome_filtered,by.x="ID",by.y="ID")
 temp3 <- merge(temp1,data_dna_filtered_t,by.x="ID",by.y="row.names")
