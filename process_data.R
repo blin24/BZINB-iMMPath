@@ -1,4 +1,5 @@
 ### Filter microbiome data, merge microbiome and metabolome data
+filter_file <- read.csv("filter_file.csv")
 data_dna <- data$otu[,,1]
 data_dna_filtered <- data_dna[rownames(data_dna) %in% filter_file$bacteria[filter_file$filter.D==TRUE],]
 data_dna_filtered_t <- t(data_dna_filtered)
