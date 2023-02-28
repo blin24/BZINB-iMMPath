@@ -46,5 +46,16 @@ corr_out <- rbind(corr_out,out_line)
 
 }
 save(corr_out,file="res_ecc1/out_ecc1_1.RData")
-
+#example results
+#                        a0
+#out_line 1  1 0.0778856972
+#out_line 1  2 0.0001503718
+#out_line 1  3 0.1031816508
+#out_line 1  4 0.0008504096
+#out_line 1  5 0.0011139067
+#out_line 1  6 0.0008793986
+#out_line 1  7 0.0313911807
+#out_line 1  8 0.0833830678
+#out_line 1  9 0.0009769941
+#out_line 1 10 0.0024401345
 
