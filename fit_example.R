@@ -20,6 +20,7 @@ set_in
 load("counts_ecc1.RData")
 #counts_ecc1 is a list of (1) metabolome counts matrix, (2) microbiome counts matrix for ECC=1 group.
 ## replace the metabolome counts matrix with microbiome counts matrix for correlation between species.
+## please refer to counts_ecc1_example.RData as an example for input.
 metab_counts <- counts_ecc1[[1]][,-1]
 metab_counts[is.na(metab_counts)] <- 0
 microb_counts <- counts_ecc1[[2]][,-1]
